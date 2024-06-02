@@ -18,6 +18,10 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
 server:
   port: 9002
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9102/eureka/  
 management:
   endpoints:
     web:
