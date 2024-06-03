@@ -22,3 +22,11 @@ eureka:
       defaultZone: http://localhost:9102/eureka/
 server:
   port: 9001
+info:
+  app:
+    name: Dev Store Catalog
+    description: This is catalog service for Dev Store
+    version: 1.0.0
+  company:
+    name: Cross Training
+    department: IT

@@ -30,3 +30,11 @@ management:
   endpoint:
     health:
       show-details: always
+info:
+  app:
+    name: Dev Store Rating
+    description: This is rating service for Dev Store
+    version: 1.0.0
+  company:
+    name: Cross Training
+    department: IT

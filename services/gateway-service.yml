@@ -2,7 +2,7 @@ spring:
   application:
     name: gateway
 server:
-  port: 9100
+  port: 9000
 eureka:
   client:
     serviceUrl:
@@ -15,3 +15,39 @@ management:
   endpoint:
     health:
       show-details: always
+info:
+  app:
+    name: Dev Store Gateway
+    description: This is gateway service for Dev Store
+    version: 1.0.0
+  company:
+    name: Cross Training
+    department: IT
+---
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: customer-service
+          uri: lb://customer-service
+          predicates:
+            - Path=/customers/**
+        - id: catalog-service
+          uri: lb://catalog-service
+          predicates:
+            - Path=/catalog/**
+        - id: rating-service
+          uri: lb://rating-service
+          predicates:
+            - Path=/rating/**
+        - id: recommendation-service
+          uri: lb://recommendation-service
+          predicates:
+            - Path=/recommendation/**
+        - id: shipping-service
+          uri: lb://shipping-service
+          predicates:
+            - Path=/shipping/**      
