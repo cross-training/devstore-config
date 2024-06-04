@@ -1,6 +1,10 @@
+spring:
+  application:
+    name: discovery
+  zipkin:
+    baseUrl: ${LOGGING_SERVICE_URI} 
 server:
   port: ${PORT:8080}
-
 eureka:
   instance:
     hostname: localhost

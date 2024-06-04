@@ -1,6 +1,8 @@
 spring:
   application:
     name: catalog
+  zipkin:
+    baseUrl: ${LOGGING_SERVICE_URI}   
   profiles:
     active: dev
   datasource:
