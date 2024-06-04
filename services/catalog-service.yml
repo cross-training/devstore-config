@@ -21,7 +21,7 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:9102/eureka/
 server:
-  port: 9001
+  port: ${PORT:8080}
 info:
   app:
     name: Dev Store Catalog
