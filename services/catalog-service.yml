@@ -22,8 +22,6 @@ eureka:
   client:
     serviceUrl:
       defaultZone: ${DISCOVERY_SERVICE_URI}
-server:
-  port: ${PORT:8080}
 info:
   app:
     name: Dev Store Catalog
@@ -32,3 +30,11 @@ info:
   company:
     name: Cross Training
     department: IT
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,info,prometheus"
+  endpoint:
+    health:
+      show-details: always
