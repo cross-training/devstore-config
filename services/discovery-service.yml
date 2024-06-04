@@ -4,7 +4,7 @@ spring:
   zipkin:
     baseUrl: ${LOGGING_SERVICE_URI} 
 server:
-  port: ${PORT:8080}
+  port: ${PORT:8761}
 eureka:
   instance:
     hostname: localhost
