@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: transaction-reception
+  zipkin:
+    baseUrl: ${LOGGING_SERVICE_URI}  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${DISCOVERY_SERVICE_URI}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,info,prometheus"
+  endpoint:
+    health:
+      show-details: always
+info:
+  app:
+    name: Dev Store Gateway
+    description: This is transaction reception service for Dev Store
+    version: 1.0.0
+  company:
+    name: Cross Training
+    department: IT 
