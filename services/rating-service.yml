@@ -3,13 +3,13 @@ spring:
     name: rating
   zipkin:
     baseUrl: ${LOGGING_SERVICE_URI}   
-  profiles:
-    active: dev
   datasource:
+    platform: postgres
     driverClassName: org.postgresql.Driver
     url: ${DB_URL}
     username: ${DB_USER}
     password: ${DB_PASSWORD}
+    schema: ${DB_SCHEMA}
   jpa:
     hibernate:
       ddl-auto: update

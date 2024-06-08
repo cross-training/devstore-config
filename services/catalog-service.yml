@@ -3,13 +3,13 @@ spring:
     name: catalog
   zipkin:
     baseUrl: ${LOGGING_SERVICE_URI}   
-  profiles:
-    active: dev
   datasource:
+    platform: postgres
     driverClassName: org.postgresql.Driver
     url: ${DB_URL}
     username: ${DB_USER}
     password: ${DB_PASSWORD}
+    schema: ${DB_SCHEMA}
   jpa:
     hibernate:
       ddl-auto: update
@@ -22,14 +22,6 @@ eureka:
   client:
     serviceUrl:
       defaultZone: ${DISCOVERY_SERVICE_URI}
-info:
-  app:
-    name: Dev Store Catalog
-    description: This is catalog service for Dev Store
-    version: 1.0.0
-  company:
-    name: Cross Training
-    department: IT
 management:
   endpoints:
     web:
@@ -38,3 +30,11 @@ management:
   endpoint:
     health:
       show-details: always
+info:
+  app:
+    name: Dev Store Catalog
+    description: This is catalog service for Dev Store
+    version: 1.0.0
+  company:
+    name: Cross Training
+    department: IT
