@@ -13,8 +13,8 @@ management:
   endpoint:
     health:
       show-details: always
-    info:
-      enabled: true
+    # info:
+    #   enabled: true
   info:
     env:
       enabled: true      
