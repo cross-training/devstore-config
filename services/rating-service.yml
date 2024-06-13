@@ -1,8 +1,6 @@
 spring:
-  application:
-    name: rating
   zipkin:
-    baseUrl: ${LOGGING_SERVICE_URI}   
+    baseUrl: ${TRACE_SERVICE_URI}   
   datasource:
     platform: postgres
     driverClassName: org.postgresql.Driver

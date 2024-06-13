@@ -1,8 +1,6 @@
 spring:
-  application:
-    name: transaction-reception
   zipkin:
-    baseUrl: ${LOGGING_SERVICE_URI}  
+    baseUrl: ${TRACE_SERVICE_URI}  
 eureka:
   client:
     serviceUrl:

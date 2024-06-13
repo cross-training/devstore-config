@@ -1,8 +1,6 @@
 spring:
-  application:
-    name: gateway
   zipkin:
-    baseUrl: ${LOGGING_SERVICE_URI}  
+    baseUrl: ${TRACE_SERVICE_URI}  
 eureka:
   client:
     serviceUrl:
