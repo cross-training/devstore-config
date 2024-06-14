@@ -20,7 +20,7 @@ info:
   app:
     name: Dev Store Gateway
     description: This is gateway service for Dev Store
-    version: 1.0.0
+    version: ${VERSION}
   company:
     name: Cross Training
     department: IT
@@ -32,23 +32,27 @@ spring:
         locator:
           enabled: true
       routes:
-        - id: customer-service
-          uri: lb://customer-service
+        - id: customer
+          uri: lb://customer
           predicates:
-            - Path=/customers/**
-        - id: catalog-service
-          uri: lb://catalog-service
+            - Path=/customer/**
+        - id: catalog
+          uri: lb://catalog
           predicates:
             - Path=/catalog/**
-        - id: rating-service
-          uri: lb://rating-service
+        - id: rating
+          uri: lb://rating
           predicates:
             - Path=/rating/**
-        - id: recommendation-service
-          uri: lb://recommendation-service
+        - id: recommendation
+          uri: lb://recommendation
           predicates:
             - Path=/recommendation/**
-        - id: shipping-service
-          uri: lb://shipping-service
+        - id: shipping
+          uri: lb://shipping
           predicates:
-            - Path=/shipping/**      
+            - Path=/shipping/**
+        - id: transaction
+          uri: lb://transaction
+          predicates:
+            - Path=/transaction/**            

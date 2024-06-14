@@ -35,7 +35,7 @@ info:
   app:
     name: Dev Store Catalog
     description: This is catalog service for Dev Store
-    version: 1.0.0
+    version: ${VERSION}
   company:
     name: Cross Training
     department: IT
