@@ -30,12 +30,12 @@ management:
       show-details: always
   info:
     env:
-      enabled: true 
+      enabled: true
+logging.pattern.level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-},%X{mybaggage:-}]"       
 info:
   app:
     name: Dev Store Catalog
     description: This is catalog service for Dev Store
-    version: ${VERSION}
   company:
     name: Cross Training
     department: IT

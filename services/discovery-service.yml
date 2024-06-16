@@ -21,7 +21,6 @@ info:
   app:
     name: Dev Store Discovery
     description: This is discovery service for Dev Store
-    version: ${VERSION}
   company:
     name: Cross Training
     department: IT

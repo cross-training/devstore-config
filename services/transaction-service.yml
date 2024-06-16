@@ -20,7 +20,6 @@ info:
   app:
     name: Dev Store Transaction Reception
     description: This is transaction reception service for Dev Store
-    version: ${VERSION}
   company:
     name: Cross Training
     department: IT 

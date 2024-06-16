@@ -35,7 +35,6 @@ info:
   app:
     name: Dev Store Rating
     description: This is rating service for Dev Store
-    version: ${VERSION}
   company:
     name: Cross Training
     department: IT

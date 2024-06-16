@@ -15,12 +15,15 @@ management:
       show-details: always
   info:
     env:
-      enabled: true      
+      enabled: true
+  tracing:
+    sampling:
+      probability: 1.0    
+logging.pattern.level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-},%X{mybaggage:-}]"            
 info:
   app:
     name: Dev Store Gateway
     description: This is gateway service for Dev Store
-    version: ${VERSION}
   company:
     name: Cross Training
     department: IT
