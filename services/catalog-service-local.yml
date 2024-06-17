@@ -1,0 +1,14 @@
+spring:
+  zipkin:
+    baseUrl: http://localhost:9411  
+  datasource:
+    platform: postgres
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/devstore
+    username: catalog
+    password: catalog
+    schema: catalog
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

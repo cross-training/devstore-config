@@ -2,10 +2,13 @@
     "cSpell.words": [
         "classpath",
         "datasource",
+        "devstore",
+        "jdbc",
         "mybaggage",
         "postgres",
         "postgresql",
         "prometheus",
+        "uuid",
         "zipkin"
     ]
 }
