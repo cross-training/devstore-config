@@ -1,4 +1,13 @@
 spring:
+  zipkin:
+    baseUrl: ${TRACE_SERVICE_URI} 
+  datasource:
+    platform: postgres
+    driverClassName: org.postgresql.Driver
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+    schema: ${DB_SCHEMA}
   jpa:
     hibernate:
       ddl-auto: update
@@ -8,6 +17,9 @@ spring:
         default_schema: catalog
         dialect: org.hibernate.dialect.PostgreSQLDialect
 eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${DISCOVERY_SERVICE_URI}
   instance:
     instance-id: ${spring.application.name}:${random.uuid}     
 management:
