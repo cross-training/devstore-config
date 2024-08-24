@@ -1,2 +1,3 @@
-# devstore-config
+# Devstore Config
+
 Configuration for dev store
